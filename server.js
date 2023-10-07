@@ -7,12 +7,12 @@ const app = express();
 require("dotenv").config();
 
 //const uri = process.env.DBUIR;
-const uri = "mongodb://localhost:27017/aiproject";
+//const uri = "mongodb://localhost:27017/aiproject";
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:3000",
-    //origin: "https://aiimage-4d0y.onrender.com",
+    //origin: "http://localhost:3000",
+    origin: "https://company-cyi0.onrender.com",
   })
 );
 app.use(cookieParser());

@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const mongoose = require("mongoose");
 const router = require("./router/allRouter");
 const cookieParser = require("cookie-parser");
 const app = express();
@@ -16,9 +15,6 @@ app.use(
   })
 );
 app.use(cookieParser());
-mongoose.set("strictQuery", true);
-mongoose.connect(uri, () => {
-  app.listen(3500, () => console.log(`listening`));
-});
+ app.listen(3500, () => console.log(`listening`));
 app.use(express.json());
 app.use(router);
